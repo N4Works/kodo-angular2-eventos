@@ -7,16 +7,19 @@ import {Component, View, bootstrap} from 'angular2/angular2';
 })
 @View({
     template: `
-        <div style="padding: 5px; border: 1px solid #ddd; width: 250px;">
+        <div style="padding: 5px; border: 1px solid #ddd; width: 450px;">
             <h5>elemento filho</h5>
             <button type="button"
                 (click)="clickAconteceuAqui()">clique aqui</button>
+            <p [inner-text]="logDoClick"></p>
         </div>
     `
 })
 class ElementoFilhoCmp {
+    logDoClick: string = '';
+
     clickAconteceuAqui() {
-        console.log('click aconteceu no elemento filho');
+        this.logDoClick = `Evento elemento filho: clicado em: ${new Date()}. O click aconteceu no elemento filho.`;
     }
 }
 
@@ -26,7 +29,7 @@ class ElementoFilhoCmp {
 @View({
     template: `
         <hr />
-        <h3>evento de click <strong>com</strong> bubble</h3>
+        <h3>CLICK - <strong>com</strong> bubble</h3>
 
         <elemento-filho-que-aconteceu-o-evento (^click)="elementoPaiPegouOEvento()"></elemento-filho-que-aconteceu-o-evento>
 
@@ -39,7 +42,7 @@ export class EventoDeClickComBubbleCmp {
     logDoClick: string = '';
 
     elementoPaiPegouOEvento() {
-        this.logDoClick = `Fui clicado em: ${new Date()}. O click aconteceu no elemento filho, mas o elemento pai eh quem tratou.`;
+        this.logDoClick = `Evento bubbled para o elemento pai: clicado em: ${new Date()}. O click aconteceu no elemento filho.`;
     }
 }
 

@@ -8,7 +8,7 @@ import {Component, View, bootstrap} from 'angular2/angular2';
 @View({
     template: `
         <hr />
-        <h4>evento de click <strong>sem</strong> bubble</h4>
+        <h3>CLICK - <strong>sem</strong> bubble</h3>
 
         <button type="button"
                 (click)="fuiClicado()">clique aqui</button>
