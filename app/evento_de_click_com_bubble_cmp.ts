@@ -8,7 +8,7 @@ import {Component, View, bootstrap} from 'angular2/angular2';
 @View({
     template: `
         <div style="padding: 5px; border: 1px solid #ddd; width: 450px;">
-            <h5>elemento filho</h5>
+            <h4>elemento filho</h4>
             <button type="button"
                 (click)="clickAconteceuAqui()">clique aqui</button>
             <p [inner-text]="logDoClick"></p>

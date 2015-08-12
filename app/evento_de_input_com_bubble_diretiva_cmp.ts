@@ -1,4 +1,4 @@
-/// <reference path="../typings/tsd.d.ts />
+/// <reference path="../typings/tsd.d.ts" />
 
 import {Component, View, Directive} from 'angular2/angular2';
 
@@ -32,6 +32,6 @@ export class EventoDeInputComBubbleCmp {
     logDoInput: string = '';
 
     inputHandlerCmp() {
-        this.logDoInput = `Input aconteceu em: ${new Date()}}`;
+        this.logDoInput = `Input aconteceu em: ${new Date()}`;
     }
 }
