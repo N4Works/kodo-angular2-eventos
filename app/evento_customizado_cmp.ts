@@ -37,7 +37,7 @@ class RespostaDirective {
 @View({
   template: `
     <hr/>
-    <h3>evento-customizado</h3>
+    <h3>GABARITO - Evento Customizado (de diretiva para componente)</h3>
     <label>9x9 é...</label>
     <input type="text" gabarito (resposta-certa)="aeeeee()" (resposta-errada)="erou()"/>
     <p [inner-text]="resultado" ></p>
@@ -53,7 +53,7 @@ export class EventoCustomizadoCmp {
   }
 
   erou() {
-    this.resultado = 'Ô loko, bicho! Errou!';
+    this.resultado = 'Ô loko, bicho! Erou!';
   }
 
 }

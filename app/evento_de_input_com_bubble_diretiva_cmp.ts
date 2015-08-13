@@ -21,7 +21,7 @@ class EventoDeInputComBubbleDiretiva {
 @View({
     template: `
         <hr />
-        <h3>Input - Com bubble</h3>
+        <h3>INPUT - Com bubble</h3>
         <input type="text" diretiva-qualquer (input)="inputHandlerCmp()"/>
         <p [inner-text]="logDoInput"></p>
     `,
