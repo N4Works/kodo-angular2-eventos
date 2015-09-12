@@ -31,7 +31,7 @@ class ElementoFilhoCmp {
         <hr />
         <h3>CLICK - <strong>com</strong> bubble</h3>
 
-        <elemento-filho-que-aconteceu-o-evento (^click)="elementoPaiPegouOEvento()"></elemento-filho-que-aconteceu-o-evento>
+        <elemento-filho-que-aconteceu-o-evento (click)="elementoPaiPegouOEvento()"></elemento-filho-que-aconteceu-o-evento>
 
         <p [inner-text]="logDoClick"></p>
     `,
