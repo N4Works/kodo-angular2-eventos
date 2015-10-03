@@ -45,5 +45,3 @@ export class EventoDeClickComBubbleCmp {
         this.logDoClick = `Evento bubbled para o elemento pai: clicado em: ${new Date()}. O click aconteceu no elemento filho.`;
     }
 }
-
-bootstrap(ElementoFilhoCmp);

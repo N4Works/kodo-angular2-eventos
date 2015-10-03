@@ -80,8 +80,3 @@ export class ToggleWrapper {
     console.log('toggle-wrapper inicializado')
   }
 }
-
-bootstrap(InformacaoASerEscondidaCmp)
-    .then(() => bootstrap(ToggleCmp))
-    .then(() => console.log('toggle cmp criado corretamente'))
-    .catch((erro) => console.log(`erro ao criar o toggle ${erro}`))

@@ -1,24 +1,20 @@
 /// <reference path="../typings/tsd.d.ts" />
 
-import {Component, View, EventEmitter, Directive, ElementRef, Inject} from 'angular2/angular2';
+import {Component, View, EventEmitter, Directive, ElementRef, Output, Inject} from 'angular2/angular2';
 
 @Directive({
   selector: '[gabarito]',
   host: {
       '(input)': 'respostaHandler($event)'
   },
-  events: ['respostaCerta', 'respostaErrada'],
-  bindings: [EventEmitter]
+  outputs: ['respostaCerta', 'respostaErrada']
 })
 class RespostaDirective {
-  respostaCerta: EventEmitter;
-  respostaErrada: EventEmitter;
-  elemento: ElementRef;
+  @Output() respostaCerta: EventEmitter = new EventEmitter();
+  @Output() respostaErrada: EventEmitter = new EventEmitter();
 
-  constructor(@Inject(ElementRef) el: ElementRef) {
-    this.respostaCerta = new EventEmitter();
-    this.respostaErrada = new EventEmitter();
-    this.elemento = el;
+  constructor(@Inject(ElementRef) public elemento: ElementRef) {
+
   }
 
   respostaHandler() {

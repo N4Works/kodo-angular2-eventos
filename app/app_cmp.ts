@@ -19,7 +19,9 @@ import {ToggleWrapper} from 'app/evento_click_toggle_cmp.js';
         <evento-customizado></evento-customizado>
         <toggle-wrapper></toggle-wrapper>
     `,
-    directives: [EventoDeClickSemBubbleCmp, EventoDeClickComBubbleCmp, EventoDeInputComBubbleCmp, EventoCustomizadoCmp, ToggleWrapper]
+    directives: [EventoDeClickSemBubbleCmp, EventoDeClickComBubbleCmp,
+                 EventoDeInputComBubbleCmp, EventoCustomizadoCmp,
+                 ToggleWrapper]
 })
 
 export class AppCmp {
@@ -28,10 +30,6 @@ export class AppCmp {
     }
 }
 
-Promise.all([ bootstrap(EventoDeClickSemBubbleCmp),
-              bootstrap(EventoDeClickComBubbleCmp),
-              bootstrap(EventoDeInputComBubbleCmp),
-              bootstrap(EventoCustomizadoCmp),
-              bootstrap(ToggleWrapper) ])
+bootstrap(AppCmp)
        .then(() => console.log('bootstrap da app feita corretamente'))
        .catch((erro) => console.log(`erro durante bootstrap da app: ${erro}`));

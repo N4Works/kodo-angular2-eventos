@@ -6,7 +6,7 @@
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "angular2/angular2.d.ts": {
-      "commit": "338f9db37074d197764e95a487ddb865c5f2d73c"
+      "commit": "98d3168c2c570352a3a7393788e2ec9fbb08ade6"
     },
     "es6-promise/es6-promise.d.ts": {
       "commit": "3b0f362204ea965952dafdb682a5274d527ef9d0"
