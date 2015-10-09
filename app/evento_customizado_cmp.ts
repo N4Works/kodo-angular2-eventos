@@ -1,6 +1,6 @@
 /// <reference path="../typings/tsd.d.ts" />
 
-import {Component, View, EventEmitter, Directive, ElementRef, Output, Inject} from 'angular2/angular2';
+import {Component, View, EventEmitter, Directive, ElementRef, Inject} from 'angular2/angular2';
 
 @Directive({
   selector: '[gabarito]',
@@ -10,8 +10,8 @@ import {Component, View, EventEmitter, Directive, ElementRef, Output, Inject} fr
   outputs: ['respostaCerta', 'respostaErrada']
 })
 class RespostaDirective {
-  @Output() respostaCerta: EventEmitter = new EventEmitter();
-  @Output() respostaErrada: EventEmitter = new EventEmitter();
+  respostaCerta: EventEmitter = new EventEmitter();
+  respostaErrada: EventEmitter = new EventEmitter();
 
   constructor(@Inject(ElementRef) public elemento: ElementRef) {
 
